@@ -1,0 +1,16 @@
+
+<div class="search-bar">
+    
+    <input type="text" [(ngModel)]="searchQuery" (input)="onInputChange()" placeholder="Search Employee" class="place" />
+    
+    <mat-icon class="search-icon">search</mat-icon>
+    
+  </div> 
+<ul>
+  <li *ngFor="let employee of employees" [hidden]="!employee.visible">
+    <p>Employee ID: {{ employee['Employee ID'] }}</p>
+    <p>Employee Name: {{ employee['Employee Name'] }}</p>
+    <p>Dedalus ID: {{ employee['Dedalus ID'] }}</p>
+  </li>
+ 
+</ul>
